@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Appartamenti Vacanze | HGT</title>
+  <meta name="description" content="Appartamenti per soggiorni turistici. Prenota su Booking.com o richiedi un preventivo personalizzato." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Appartamenti Vacanze | HGT" />
+  <meta property="og:description" content="Alloggi selezionati per il tuo soggiorno. Link diretti a Booking.com e preventivi su misura." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tuodominio.it" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b1320; --card:#101a2b; --muted:#a9b2c3; --text:#eaf0ff; --brand:#4fd1c5; --accent:#7aa2ff; --ok:#22c55e; --warn:#f59e0b; --danger:#ef4444;
+    }
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(11,19,32,.85);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid #1f2a44;z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 24px}
+    .nav .logo{display:flex;gap:10px;align-items:center}
+    .badge{background:linear-gradient(90deg,var(--brand),var(--accent));padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid #24324f;background:#0f1a2d;color:var(--text);font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--accent));color:#081021;border:none}
+    .btn.small{padding:8px 12px;font-size:14px}
+    .hero{padding:64px 24px}
+    .hero h1{font-size:40px;line-height:1.1;margin:10px 0}
+    .hero p{color:var(--muted);max-width:780px}
+    .grid{display:grid;gap:18px}
+    .cards{grid-template-columns:repeat(12,1fr)}
+    .card{grid-column:span 12;background:var(--card);border:1px solid #1f2a44;border-radius:16px;padding:16px}
+    .card h3{margin:6px 0 8px 0}
+    .tag{font-size:12px;color:#9fb4ff;border:1px solid #2a3a63;border-radius:999px;padding:4px 8px;display:inline-block}
+    .list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+    .list li{display:flex;gap:10px;align-items:flex-start}
+    .list .dot{width:8px;height:8px;border-radius:50%;margin-top:9px;background:var(--brand)}
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+    .img{grid-column:span 12;height:220px;background:#0a1426;border:1px solid #1f2a44;border-radius:14px;overflow:hidden}
+    .img img{width:100%;height:100%;object-fit:cover;display:block}
+    form{display:grid;gap:14px}
+    label{font-weight:600}
+    input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #24324f;background:#0e1729;color:var(--text)}
+    input::placeholder,textarea::placeholder{color:#7b89a7}
+    .row{display:grid;gap:12px;grid-template-columns:repeat(12,1fr)}
+    .col-6{grid-column:span 12}
+    .col-4{grid-column:span 12}
+    .col-3{grid-column:span 12}
+    footer{padding:40px 24px;color:#9aa8c6}
+    .fineprint{font-size:12px;color:#8090b2}
+    .kpi{display:flex;gap:14px;align-items:center}
+    .kpi b{font-size:22px}
+    .cta-bar{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{border:1px solid #2a3a63;border-radius:999px;padding:6px 10px;font-size:12px;color:#a8b6d6}
+    .faq summary{cursor:pointer;font-weight:600}
+    .faq details{border:1px solid #24324f;border-radius:12px;padding:12px;background:#0e1729}
+
+    /* responsive */
+    @media(min-width:720px){
+      .hero{padding:80px 24px}
+      .hero h1{font-size:56px}
+      .card{grid-column:span 6}
+      .img{grid-column:span 6;height:260px}
+      .col-6{grid-column:span 6}
+      .col-4{grid-column:span 4}
+      .col-3{grid-column:span 3}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav container">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z" stroke="#7aa2ff" stroke-width="1.5"/><path d="M12 7l5 3v4l-5 3-5-3V10l5-3z" fill="#4fd1c5"/></svg>
+        <strong>HGT Apartments</strong>
+      </div>
+      <nav class="cta-bar">
+        <a class="btn small" href="#appartamenti">Appartamenti</a>
+        <a class="btn small" href="#preventivo">Richiedi preventivo</a>
+        <a class="btn primary small" href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero container">
+    <span class="badge">Affitti turistici • prenota o chiedi un preventivo</span>
+    <h1>Appartamenti per vacanze con assistenza dedicata</h1>
+    <p>Soluzioni flessibili per coppie, famiglie e trasferte lavoro. Prenota subito su Booking.com oppure invia i tuoi dettagli per ricevere una proposta su misura in poche ore.</p>
+    <div class="cta-bar" style="margin-top:16px">
+      <a class="btn primary" href="#preventivo">Richiedi preventivo</a>
+      <a class="btn" href="#booking">Vai ai link Booking.com</a>
+    </div>
+    <div style="margin-top:24px;display:grid;gap:12px;grid-template-columns:repeat(12,1fr)">
+      <div class="card" style="grid-column:span 6">
+        <div class="kpi"><b>9.2/10</b><span>Valutazione media ospiti*</span></div>
+        <div class="fineprint">*Esempio. Sostituisci con i tuoi dati reali.</div>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <div class="kpi"><b>24/7</b><span>Assistenza messaggi</span></div>
+        <div class="fineprint">Supporto via email per richieste e check-in.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="appartamenti" class="container">
+    <h2>I nostri appartamenti</h2>
+    <div class="gallery" style="margin-top:10px">
+      <div class="img"><img src="/images/app1.jpg" alt="Bilocale Centro" /></div>
+      <div class="img"><img src="/images/app2.jpg" alt="Trilocale Family" /></div>
+      <div class="img"><img src="/images/app3.jpg" alt="Suite Panoramica" /></div>
+      <div class="img"><img src="/images/app4.jpg" alt="Monolocale Smart" /></div>
+    </div>
+    <div class="grid cards" style="margin-top:14px">
+      <article class="card">
+        <span class="tag">Bilocale • 2–4 ospiti</span>
+        <h3>Bilocale Centro</h3>
+        <ul class="list">
+          <li><span class="dot"></span><span>Zona centrale, vicino ai principali servizi</span></li>
+          <li><span class="dot"></span><span>Wi‑Fi, aria condizionata, smart TV</span></li>
+          <li><span class="dot"></span><span>Self check‑in</span></li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="tag">Trilocale • 4–6 ospiti</span>
+        <h3>Trilocale Family</h3>
+        <ul class="list">
+          <li><span class="dot"></span><span>Cucina completa e due camere</span></li>
+          <li><span class="dot"></span><span>Ideale per famiglie e gruppi</span></li>
+          <li><span class="dot"></span><span>Balcone o terrazza</span></li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="tag">Suite • 2–3 ospiti</span>
+        <h3>Suite Panoramica</h3>
+        <ul class="list">
+          <li><span class="dot"></span><span>Vista città o mare</span></li>
+          <li><span class="dot"></span><span>Letto king e area living</span></li>
+          <li><span class="dot"></span><span>Macchina caffè e dotazioni premium</span></li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="tag">Mono • 1–2 ospiti</span>
+        <h3>Monolocale Smart</h3>
+        <ul class="list">
+          <li><span class="dot"></span><span>Ottimo per trasferte lavoro</span></li>
+          <li><span class="dot"></span><span>Scrivania e Wi‑Fi veloce</span></li>
+          <li><span class="dot"></span><span>Posizione strategica</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="booking" class="container">
+    <h2>Prenota subito su Booking.com</h2>
+    <p>Preferisci confermare subito? Scegli l’appartamento e prenota in sicurezza su Booking.com.</p>
+    <div class="grid cards" style="margin-top:10px">
+      <article class="card">
+        <h3>Bilocale Centro</h3>
+        <a class="btn primary" href="https://www.booking.com/hotel/it/TUO-BILOCALE" target="_blank" rel="noopener">Vai alla scheda</a>
+      </article>
+      <article class="card">
+        <h3>Trilocale Family</h3>
+        <a class="btn primary" href="https://www.booking.com/hotel/it/TUO-TRILOCALE" target="_blank" rel="noopener">Vai alla scheda</a>
+      </article>
+      <article class="card">
+        <h3>Suite Panoramica</h3>
+        <a class="btn primary" href="https://www.booking.com/hotel/it/TUA-SUITE" target="_blank" rel="noopener">Vai alla scheda</a>
+      </article>
+      <article class="card">
+        <h3>Monolocale Smart</h3>
+        <a class="btn primary" href="https://www.booking.com/hotel/it/TUO-MONOLOCALE" target="_blank" rel="noopener">Vai alla scheda</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="preventivo" class="container">
+    <h2>Richiedi un preventivo</h2>
+    <p>Compila i campi. Riceverai una proposta personalizzata via email.</p>
+
+    <!-- Inoltro gratuito via FormSubmit: sostituisci l'email nel value dell'action -->
+    <form action="https://formsubmit.co/booking6@studiovacanze.it" method="POST">
+      <!-- impostazioni FormSubmit -->
+      <input type="hidden" name="_subject" value="Richiesta preventivo dal sito HGT" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://tuodominio.it/grazie.html" />
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <div class="row">
+        <div class="col-6">
+          <label for="nome">Nome e cognome</label>
+          <input id="nome" name="Nome" placeholder="Mario Rossi" required />
+        </div>
+        <div class="col-6">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="Email" placeholder="nome@email.com" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <label for="telefono">Telefono</label>
+          <input id="telefono" name="Telefono" placeholder="+39 ..." />
+        </div>
+        <div class="col-6">
+          <label for="alloggio">Tipologia alloggio</label>
+          <select id="alloggio" name="Tipologia">
+            <option>Bilocale</option>
+            <option>Trilocale</option>
+            <option>Suite</option>
+            <option>Monolocale</option>
+            <option>Qualsiasi</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <label for="checkin">Check‑in</label>
+          <input id="checkin" type="date" name="Check-in" required />
+        </div>
+        <div class="col-3">
+          <label for="checkout">Check‑out</label>
+          <input id="checkout" type="date" name="Check-out" required />
+        </div>
+        <div class="col-3">
+          <label for="ospiti">Ospiti</label>
+          <input id="ospiti" type="number" min="1" max="12" step="1" name="Ospiti" value="2" required />
+        </div>
+        <div class="col-3">
+          <label for="budget">Budget indicativo</label>
+          <select id="budget" name="Budget">
+            <option>&lt; €80/notte</option>
+            <option>€80–120/notte</option>
+            <option>€120–180/notte</option>
+            <option>&gt; €180/notte</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <label for="servizi">Servizi richiesti</label>
+          <select id="servizi" name="Servizi" multiple size="4">
+            <option>Parcheggio</option>
+            <option>Culla</option>
+            <option>Animali ammessi</option>
+            <option>Late check‑in</option>
+            <option>Smart working (scrivania)</option>
+          </select>
+          <div class="fineprint">Tieni premuto Ctrl/Cmd per selezionare più opzioni.</div>
+        </div>
+        <div class="col-6">
+          <label for="note">Note e preferenze</label>
+          <textarea id="note" name="Note" rows="5" placeholder="Es. preferenza piano alto, necessità fattura, orari arrivo..."></textarea>
+        </div>
+      </div>
+
+      <label class="fineprint"><input type="checkbox" name="Consenso GDPR" required /> Acconsento al trattamento dei dati ai fini della gestione della mia richiesta. <a href="#privacy">Informativa privacy</a>.</label>
+
+      <button class="btn primary" type="submit">Invia richiesta</button>
+    </form>
+  </section>
+
+  <section class="container" id="vantaggi">
+    <h2>Perché scegliere noi</h2>
+    <ul class="list" style="margin-top:10px">
+      <li><span class="dot"></span><span>Flessibilità: soluzioni adatte a soggiorni brevi o lunghi</span></li>
+      <li><span class="dot"></span><span>Assistenza: risposta rapida alle richieste</span></li>
+      <li><span class="dot"></span><span>Trasparenza: costi chiari e nessuna sorpresa</span></li>
+    </ul>
+    <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+      <span class="pill">Wi‑Fi veloce</span>
+      <span class="pill">Self check‑in</span>
+      <span class="pill">Posizioni centrali</span>
+      <span class="pill">Soluzioni family</span>
+    </div>
+  </section>
+
+  <section id="faq" class="container">
+    <h2>Domande frequenti</h2>
+    <div class="grid" style="margin-top:10px;grid-template-columns:repeat(12,1fr);gap:12px">
+      <div class="card" style="grid-column:span 12">
+        <div class="faq">
+          <details><summary>Serve carta di credito per il preventivo?</summary><div>Solo per la prenotazione su Booking.com. Per il preventivo è sufficiente il modulo.</div></details>
+          <details><summary>Politica di cancellazione</summary><div>Varia in base all’appartamento e al canale di vendita. La indicheremo nel preventivo o è visibile su Booking.com.</div></details>
+          <details><summary>Check‑in e check‑out</summary><div>Self check‑in disponibile. Gli orari vengono concordati in base alle esigenze.</div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contatti" class="container">
+    <h2>Contatti</h2>
+    <p>Email: <a href="mailto:booking6@studiovacanze.it">booking6@studiovacanze.it</a></p>
+    <p>Social: <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> • <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></p>
+  </section>
+
+  <section id="privacy" class="container">
+    <h2>Informativa privacy sintetica</h2>
+    <p class="fineprint">Titolare: HGT Apartments. Finalità: rispondere alle richieste di preventivo e informazioni. Base giuridica: esecuzione di misure precontrattuali. Conservazione: fino a 24 mesi o quanto necessario alla gestione della richiesta. Diritti dell’interessato: accesso, rettifica, cancellazione, limitazione, opposizione, portabilità. Contatti privacy: <a href="mailto:booking6@studiovacanze.it">booking6@studiovacanze.it</a>.</p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> HGT Apartments • P.IVA 00000000000</div>
+      <div class="fineprint">Questo sito utilizza solo cookie tecnici e non traccia gli utenti a fini di marketing.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  
+  <!-- Dati strutturati base (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "HGT Apartments",
+    "url": "https://tuodominio.it",
+    "email": "booking6@studiovacanze.it",
+    "priceRange": "€€",
+    "amenityFeature": [
+      {"@type":"LocationFeatureSpecification","name":"Wi‑Fi","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Self check‑in","value":true}
+    ]
+  }
+  </script>
+</body>
+</html>
